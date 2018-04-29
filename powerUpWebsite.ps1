@@ -28,6 +28,6 @@ $VMS = Get-AzureRmVM -ResourceGroup azure-automation-demo |? name -like "win-iis
 
 foreach ($vm in $vms) {
     IF ($vm.name -ne 'win-iis-demo-a') {
-        $vm | Start-AzureRmVm -Confirm:$false
+        $vm | Start-AzureRmVm
     }
 }
