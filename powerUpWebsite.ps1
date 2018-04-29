@@ -24,7 +24,7 @@ catch {
 }
 
 # Get VM Names and power up 2 of them
-$VMS = Get-AzureRmVM -ResouceGroup azure-automation-demo |? name -like "win-iis-demo*"
+$VMS = Get-AzureRmVM -ResourceGroup azure-automation-demo |? name -like "win-iis-demo*"
 
 foreach ($vm in $vms) {
     IF ($vm.name -ne 'win-iis-demo-a') {
